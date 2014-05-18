@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>{{get('title',"The Watcher Site")</title>
+    <title>{{get('title',"The Watcher Site")}}</title>
     <link href="Content/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" />
     <script src="Content/Scripts/modernizr.js"></script>
@@ -28,9 +28,6 @@
                         <li><a href="/Contact">Contact</a></li>
                         <li><a href="/Game">Game</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>{{include('views/Shared',{})}}</li>
-                    </ul>
                 </div>
             </nav>
         </div>
@@ -40,6 +37,6 @@
             {{base}}
         </section>
     </div>
-    <script src="Content/bootstrap/js/bootstrap.js"></script> 
+    <script src="Content/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
