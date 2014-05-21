@@ -1,12 +1,13 @@
-%if get('authenticated',False):
-    <div>
-        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
-        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
-            @Html.AntiForgeryToken()
-            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
-    </div>
-%end
+%if get('Username','Hi') == 'Hi':
+    <li>
+        <div>
+            Hello, <a href="/Account/Manage">{{Username}}</a>!
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+                @Html.AntiForgeryToken()
+                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        </div>
+    </li>
 %else:
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    <li><a href="/Account/Register">Register</a></li>
+    <li><a href="/Account/Login">Log In</a></li>
 %end

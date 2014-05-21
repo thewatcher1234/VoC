@@ -1,0 +1,2 @@
+DBPassword = 'DBPassword'
+EncryptKey = 'ReallyLongEncryptionKey'

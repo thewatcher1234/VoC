@@ -3,15 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title>{{get('title',"The Watcher Site")}}</title>
-    <link href="Content/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" />
-    <script src="Content/Scripts/modernizr.js"></script>
+    <script src="/Content/Scripts/modernizr.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
     <header>
         <div class="container-fluid">
-            <nav class="navbar navbar-cdefault" role="navigation">
+            <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNav">
                         <span class="sr-only">Main Site Navigation</span>
@@ -28,15 +30,18 @@
                         <li><a href="/Contact">Contact</a></li>
                         <li><a href="/Game">Game</a></li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        % include("Shared/_LoginPartial.tpl",Username=username)
+                    </ul>
                 </div>
             </nav>
         </div>
     </header>
     <div id="body">
         <section class="content-wrapper main-content clear-fix">
-            {{base}}
+            {{!base}}
         </section>
     </div>
-    <script src="Content/bootstrap/js/bootstrap.js"></script>
+    <script src="/Content/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
